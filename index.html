@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap Test</title>
+        <meta name="description" content="Bootstrap Test">
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- navに背景と文字色を変える＋上部固定(fixed-top)をいれる -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <!-- containerの位置でロゴが中央か左右いっぱいか変えれる -->
+            <div class="container">
+                <!-- ロゴ部分 hiじゃなくてもOK -->
+                <h1><a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="BootstrapTest Logo"></a></h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- スマホ用のハンバーガーボタンのため普段は非表示に(上)、PC表示はdiv内でまとめてる(下) -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- mr-autoの部分でナビゲーションの位置が変わる -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">AboutUs</a>
+                        </li>
+                        <!-- 通常のリンクをドロップダウンにしている -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Products</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <!-- dividerがドロップダウンの中で境界線を表示してる -->
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 通常はform-groupでまとめるが、inlineにすることで横並びにしている -->
+                    <!-- my-2(マージンのy軸上下に8px)my-lg-0(タブレット以上で上下の余白は0) -->
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                        <!-- [btn-outline-success(検索ボタン緑)]を[btn-outline-secondary(グレー)]に変更した -->
+                        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- カルーセルここから -->
+        <!-- <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <!--【PC表示】スマホのときは非表示、ファブレット以上(PC時)は表示-->
+        <div class="d-none d-sm-block">
+            <img src="images/main1.jpg" class="d-block w-100 h-100" alt="main1">
+        </div>
+        <!--【スマホ表示】ファブレット以上は非表示 (スマホのときは表示)-->
+        <div class="d-sm-none">
+            <img src="images/main-s1.jpg" class="d-block w-100 h-100" alt="main1">
+        </div>
+        <div class="d-none d-sm-block">
+            <img src="images/main2.jpg" class="d-block w-100 h-100" alt="main2">
+        </div>
+        <div class="d-sm-none">
+            <img src="images/main-s2.jpg" class="d-block w-100 h-100" alt="main2">
+        </div>
+        <div class="d-none d-sm-block">
+            <img src="images/main3.jpg" class="d-block w-100 h-100" alt="main3">
+        </div>
+        <div class="d-sm-none">
+            <img src="images/main-s3.jpg" class="d-block w-100 h-100" alt="main3">
+        </div>
+        </div>
+        <a class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+        <a class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div> -->
+        <!-- カルーセルここまで、問題ありcopyと比較して原因を確認する -->
+        <!-- copy -->
+        <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-none d-sm-block">
+                        <img src="images/main1.jpg" class="d-block w-100 h-100" alt="main1">
+                    </div>
+                    <div class="d-sm-none">
+                        <img src="images/main-s1.jpg" class="d-block w-100 h-100" alt="main1">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-none d-sm-block">
+                        <img src="images/main2.jpg" class="d-block w-100 h-100" alt="main2">
+                    </div>
+                    <div class="d-sm-none">
+                        <img src="images/main-s2.jpg" class="d-block w-100 h-100" alt="main2">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-none d-sm-block">
+                        <img src="images/main3.jpg" class="d-block w-100 h-100" alt="main3">
+                    </div>
+                    <div class="d-sm-none">
+                        <img src="images/main-s3.jpg" class="d-block w-100 h-100" alt="main3">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- copy -->
+        <section class="container topics">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12 mb-5">
+                    <img src="images/img1.jpg" class="img-thumbnail rounded-circle d-block mx-auto" alt="">
+                    <h2>見出し</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore provident, magnam quibusdam vero quaerat nihil laudantium incidunt praesentium eaque id voluptatibus doloribus, quasi, reiciendis accusantium aliquid impedit. Fugit mollitia laudantium dolorum tempore veniam soluta nam modi facere? Quas deserunt natus ex accusantium facilis. Enim cupiditate laudantium quibusdam nemo, nostrum amet.</p>
+                    <a href="#" class="btn btn-primary mr-2">詳細</a>
+                    <a href="#" class="btn btn-warning">公式</a>
+                </div>
+                <!-- mb-5 マージンボトム5を追加 -->
+                <div class="col-lg-4 col-xs-12 mb-5">
+                    <img src="images/img2.jpg" class="img-thumbnail rounded-circle d-block mx-auto" alt="">
+                    <h2>見出し</h2>
+                    <p>Quisquam asperiores facilis corrupti vel debitis consequuntur vero unde molestias delectus! Temporibus sit nemo quia, quisquam reiciendis hic praesentium reprehenderit dolores tempore, perferendis sunt aliquam rerum voluptatibus non cum fuga maxime explicabo nisi sed consequatur maiores est? Quas sequi culpa voluptas rerum assumenda quod in quibusdam, iste, expedita, suscipit unde!</p>
+                    <a href="#" class="btn btn-primary mr-2">詳細</a>
+                    <a href="#" class="btn btn-warning">公式</a>
+                </div>
+                <div class="col-lg-4 col-xs-12 mb-5">
+                    <img src="images/img3.jpg" class="img-thumbnail rounded-circle d-block mx-auto" alt="">
+                    <h2>見出し</h2>
+                    <p>Quam minima dicta sit modi aspernatur, libero vero obcaecati natus neque ut illo temporibus aliquid laudantium quo expedita veritatis quasi veniam fuga ea cumque mollitia porro, magni pariatur! Maxime rem ex, necessitatibus, quaerat impedit, cum qui modi dicta voluptates quidem perspiciatis officiis. Asperiores ullam consequuntur, laudantium corporis quas quo enim.</p>
+                    <a href="#" class="btn btn-primary mr-2">詳細</a>
+                    <a href="#" class="btn btn-warning">公式</a>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section class="container banner">
+            <div class="row">
+                <div class="col-lg-3 col-xs-12"><img src="images/img4.jpg" class="img-thumbnail rounded w-100 mb-4" alt="バナー"></div>
+                <div class="col-lg-3 col-xs-12"><img src="images/img5.jpg" class="img-thumbnail rounded w-100 mb-4" alt="バナー"></div>
+                <div class="col-lg-3 col-xs-12"><img src="images/img6.jpg" class="img-thumbnail rounded w-100 mb-4" alt="バナー"></div>
+                <div class="col-lg-3 col-xs-12"><img src="images/img7.jpg" class="img-thumbnail rounded w-100 mb-4" alt="バナー"></div>
+            </div>
+        </section>
+        <section class="container cards my-5">
+            <div class="row">
+            <!-- テーマ 練習問題.03-8 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="images/img8.jpg" alt="card" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="images/img9.jpg" alt="card" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="images/img10.jpg" alt="card" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- テーマ 練習問題.03-8 -->
+            </div>
+        </section>
+        </div>
+        <footer class="text-muted py-5 bg-dark">
+            <div class="container">
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+                <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
